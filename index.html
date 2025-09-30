@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entregable 3</title>
+</head>
+<body>
+    <script>
+        let continuar=true;
+        while(continuar){
+            let numero1=parseFloat(prompt("Ingrese el primer numero >⩊<: "));
+            let numero2=parseFloat(prompt("Ingrese el segundo numero >⩊<: "));
+            let operacion=parseInt(prompt("1.Suma, 2.Resta, 3.Multiplicacion, 4.Division, 0.Para salir"));
+
+            if(operacion==0){
+                alert("Gracias por usar la calculadora!! ( ˶ˆᗜˆ˵ )")
+                continuar=false;
+                break;
+            }
+            function realizarOperacion(numero1, numero2, operacion) {
+                if(operacion==1){
+                    return numero1+numero2
+                }else if(operacion==2){
+                    return numero1-numero2
+                }else if(operacion==3){
+                    return numero1*numero2
+                }else if(operacion==4){
+                    if(numero2==0){
+                        return"No se puede dividir entre cero (ó﹏ò｡)";
+                    }
+                    return numero1/numero2;
+                }else{
+                    return"Operacion invalida...(╥ᆺ╥;)";
+                }
+            }
+            let resultado=realizarOperacion(numero1,numero2,operacion);
+            alert("El resultado de la operacion es: "+resultado);
+        }
+    </script>
+</body>
+</html>
